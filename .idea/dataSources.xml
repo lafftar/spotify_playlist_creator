@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="api_calls_and_sorted_data" uuid="5edc71af-b2cc-4076-92da-92ec93aca1d3">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\lafft\Downloads\spotify_playlist_creator\spotify_playlist_creator\api_calls_and_sorted_data.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
