@@ -5,7 +5,21 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\lafft\Downloads\spotify_playlist_creator\spotify_playlist_creator\api_calls_and_sorted_data.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/spotify_playlist_creator/api_calls_and_sorted_data.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="api_calls_and_sorted_data [2]" uuid="4dc8d83c-5956-4a50-8a79-1e9f52a6e6e8">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\lafft\OneDrive\Documents\Code\spotify_playlist_creator\spc\api_calls_and_sorted_data.db</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/sqlite-jdbc-3.31.1.jar</url>
+        </library>
+      </libraries>
     </data-source>
   </component>
 </project>
