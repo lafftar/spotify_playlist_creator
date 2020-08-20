@@ -12,7 +12,7 @@ def create_top_50(artist_name):
     t2 = time()
     print(f'{artist_name} took {t2 - t1} seconds')
 
-
+# TODO: let this load from db file, we'll save user additions here as well.
 if __name__ == '__main__':
     list_of_artist_names = ['Taylor Swift',
                             'Ariana Grande',

@@ -1,0 +1,27 @@
+# results = []
+# for song_div in page.find_all("div", {"id": "dismissable"}):
+#     single_result = {}
+#     url_and_name = song_div.find("a", {"id": "video-title"})
+#     if url_and_name:
+#         single_result["Song Name"] = url_and_name.text.strip()
+#         single_result["Url"] = f'https://www.youtube.com{url_and_name["href"]}'
+#         print(url_and_name.text.strip(), "\n", url_and_name["href"])
+#         official_artist_test = song_div.find("paper-tooltip", {"position": "top"})
+#         if official_artist_test:
+#             single_result["Official Artist"] = True
+#             print(official_artist_test.text.strip())
+#         else:
+#             single_result["Official Artist"] = None
+#             print(None)
+#         views = list(song_div.find("div", {"id": "metadata-line"}).span.text.split()[0])
+#         if views[-1] == "M":
+#             views = int(float("".join(views[:-1])) * 1000000)
+#         else:  # K, thousand
+#             views = int(float("".join(views[:-1])) * 1000)
+#         print(views)
+#         single_result["Views"] = views
+#
+#         print(single_result)
+#         print("-------------------------------------------------------------------------")
+#         results.append(single_result)
+# # print(results)

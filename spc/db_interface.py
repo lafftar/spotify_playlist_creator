@@ -3,7 +3,7 @@ import sqlite3
 def create_connection():
     # this method of connecting might cause a problem later, I tried getcwd but that didnt
     # work, I tried exact path, but that will cause problems with different systems.
-    conn = sqlite3.connect(r'../spc/api_calls_and_sorted_data.db', isolation_level=None)
+    conn = sqlite3.connect(r'../spc/spcapi_calls_and_sorted_data.db', isolation_level=None)
     return conn
 
 

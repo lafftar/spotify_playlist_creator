@@ -34,7 +34,7 @@ def sort_and_dump_data_to_db(data_frame, artist_name):
     sorted_data_frame.drop_duplicates(subset='Name', inplace=True)
     sorted_data_frame = sorted_data_frame[:50]
 
-    db_connection = create_engine('sqlite:///api_calls_and_sorted_data.db')
+    db_connection = create_engine('sqlite:///spcapi_calls_and_sorted_data.db')
     sorted_data_frame.to_sql(f"a{sub('[- ]', '_', artist_name)}_Top_Songs", if_exists='replace', method='multi',
                              con=db_connection)
     return pd.read_sql_table(table_name=f"a{sub('[- ]', '_', artist_name)}_Top_Songs", con=db_connection)

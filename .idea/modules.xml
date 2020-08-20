@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/facebook-automation/.idea/facebook-automation.iml" filepath="$USER_HOME$/PycharmProjects/facebook-automation/.idea/facebook-automation.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/manta-automation/.idea/manta-automation.iml" filepath="$USER_HOME$/PycharmProjects/manta-automation/.idea/manta-automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spotify_playlist_creator.iml" filepath="$PROJECT_DIR$/.idea/spotify_playlist_creator.iml" />
     </modules>
   </component>
