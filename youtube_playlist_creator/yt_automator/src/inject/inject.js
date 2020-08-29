@@ -6,7 +6,7 @@ chrome.extension.sendMessage({}, function (response) {
             // ----------------------------------------------------------
             // This part of the script triggers when page is done loading
             function start() {
-                let simulateMouseEvent = function (element, eventName, coordX, coordY) {
+                var simulateMouseEvent = function (element, eventName, coordX, coordY) {
                     element.dispatchEvent(new MouseEvent(eventName, {
                         view: window,
                         bubbles: true,
@@ -20,9 +20,9 @@ chrome.extension.sendMessage({}, function (response) {
                 document.querySelector('ytd-menu-renderer.ytd-playlist-sidebar-primary-info-renderer > yt-icon-button:nth-child(2)').click();
                 this.sleep(500);
                 document.querySelector('#items > ytd-menu-service-item-renderer:nth-child(1) > paper-item > yt-formatted-string').click();
-                let iframe = document.getElementsByTagName('iframe')[1];
-                let theButton = document.querySelector("#\\:6 > div");
-                let box = theButton.getBoundingClientRect(),
+                var iframe = document.getElementsByTagName('iframe')[1];
+                var theButton = document.querySelector("#\\:6 > div");
+                var box = theButton.getBoundingClientRect(),
                     coordX = box.left + (box.right - box.left) / 2,
                     coordY = box.top + (box.bottom - box.top) / 2;
                 simulateMouseEvent(theButton, "mousedown", coordX, coordY);
