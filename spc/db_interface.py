@@ -1,9 +1,16 @@
 import sqlite3
 
+
 def create_connection():
     # this method of connecting might cause a problem later, I tried getcwd but that didnt
     # work, I tried exact path, but that will cause problems with different systems.
     conn = sqlite3.connect(r'../spc/spcapi_calls_and_sorted_data.db', isolation_level=None)
+    return conn
+
+
+def create_connection_yt():
+    conn = sqlite3.connect(r'../youtube_playlist_creator/youtube_playlists.db',
+                           isolation_level=None)
     return conn
 
 
@@ -34,3 +41,5 @@ def select_data_from_table(artist_name, data_to_select, table_suffix):
     cur = cursor()
     cur.execute(f"""SELECT {data_to_select} from a{artist_name}_{table_suffix}""")
     return cur.fetchall()
+
+create_connection_yt()
