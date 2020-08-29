@@ -31,7 +31,7 @@
         "https://www.youtube.com/playlist*"
       ],
       "js": [
-        "src/inject/inject.js",
+        "src/inject/inject.js"
       ],
       "run_at": "document_end"
     }
