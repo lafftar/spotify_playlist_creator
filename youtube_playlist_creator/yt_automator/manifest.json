@@ -31,7 +31,10 @@
         "https://www.youtube.com/playlist*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/inject.js",
+        "src/bg/jquery.js",
+        "src/bg/billiteRange.js",
+        "src/bg/sendkeys.js"
       ],
       "run_at": "document_end"
     }

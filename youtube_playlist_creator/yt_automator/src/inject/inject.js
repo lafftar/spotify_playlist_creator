@@ -6,22 +6,12 @@ chrome.extension.sendMessage({}, function (response) {
             // ----------------------------------------------------------
             // This part of the script triggers when page is done loading
             async function start() {
-                var simulateMouseEvent = function (element, eventName, coordX, coordY) {
-                    element.dispatchEvent(new MouseEvent(eventName, {
-                        view: window,
-                        bubbles: true,
-                        cancelable: true,
-                        clientX: coordX,
-                        clientY: coordY,
-                        button: 0
-                    }));
-                };
                 console.log("Hello. This message was sent from scripts/inject.js");
-                document.querySelector('ytd-menu-renderer.ytd-playlist-sidebar-primary-info-renderer > yt-icon-button:nth-child(2)').click();
+                $('ytd-menu-renderer.ytd-playlist-sidebar-primary-info-renderer > yt-icon-button:nth-child(2)').click();
                 await this.sleep(500);
-                document.querySelector('#items > ytd-menu-service-item-renderer:nth-child(1) > paper-item > yt-formatted-string').click();
+                $('#items > ytd-menu-service-item-renderer:nth-child(1) > paper-item > yt-formatted-string').click();
                 await this.sleep(1500)
-                var i_frame = document.getElementsByTagName('iframe')[1].contentWindow.document;
+                var i_frame = $('iframe').contentWindow.document;
                 var theButton = i_frame.querySelector("#\\:6 > div");
                 var box = theButton.getBoundingClientRect(),
                     coordX = box.left + (box.right - box.left) / 2,
@@ -29,6 +19,8 @@ chrome.extension.sendMessage({}, function (response) {
                 simulateMouseEvent(theButton, "mousedown", coordX, coordY);
                 simulateMouseEvent(theButton, "mouseup", coordX, coordY);
                 simulateMouseEvent(theButton, "click", coordX, coordY);
+                var url_box = $('#\\:l');
+                url_box.sendkeys('https://youtube.com/watch?v=M94bXPxpAes{enter}')
                 console.log("Done!");
             }
 
@@ -45,4 +37,15 @@ function getElementByXpath(path) {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function simulateMouseEvent(element, eventName, coordX, coordY) {
+    element.dispatchEvent(new MouseEvent(eventName, {
+        view: window,
+        bubbles: true,
+        cancelable: true,
+        clientX: coordX,
+        clientY: coordY,
+        button: 0
+    }));
 }

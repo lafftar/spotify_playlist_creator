@@ -11,3 +11,21 @@ chrome.extension.onMessage.addListener(
   	chrome.pageAction.show(sender.tab.id);
     sendResponse();
   });
+
+injectScripts(["src/bg/jquery.js", "src/bg/billiteRange.js", "src/bg/sendkeys.js"]);
+
+function injectScripts(scripts, callback) {
+  if(scripts.length) {
+    var script = scripts.shift();
+    chrome.tabs.executeScript({file: script}, function() {
+      if(chrome.runtime.lastError && typeof callback === "function") {
+        callback(false); // Injection failed
+      }
+      injectScripts(scripts, callback);
+    });
+  } else {
+    if(typeof callback === "function") {
+      callback(true);
+    }
+  }
+}
