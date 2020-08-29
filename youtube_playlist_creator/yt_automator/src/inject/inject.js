@@ -20,6 +20,7 @@ chrome.extension.sendMessage({}, function (response) {
                 document.querySelector('ytd-menu-renderer.ytd-playlist-sidebar-primary-info-renderer > yt-icon-button:nth-child(2)').click();
                 await this.sleep(500);
                 document.querySelector('#items > ytd-menu-service-item-renderer:nth-child(1) > paper-item > yt-formatted-string').click();
+                await this.sleep(500)
                 var i_frame = document.getElementsByTagName('iframe')[1].contentWindow.document;
                 var theButton = i_frame.querySelector("#\\:6 > div");
                 var box = theButton.getBoundingClientRect(),
