@@ -11,7 +11,7 @@ chrome.extension.sendMessage({}, function (response) {
                 await this.sleep(500);
                 $('#items > ytd-menu-service-item-renderer:nth-child(1) > paper-item > yt-formatted-string').click();
                 await this.sleep(1500)
-                var i_frame = $('iframe').contentWindow.document;
+                var i_frame = $('.picker-frame').contentWindow.document;
                 var theButton = i_frame.querySelector("#\\:6 > div");
                 var box = theButton.getBoundingClientRect(),
                     coordX = box.left + (box.right - box.left) / 2,
