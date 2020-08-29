@@ -11,7 +11,7 @@ chrome.extension.sendMessage({}, function (response) {
                 await this.sleep(500);
                 $('#items > ytd-menu-service-item-renderer:nth-child(1) > paper-item > yt-formatted-string').click();
                 await this.sleep(1500)
-                var i_frame = document.getElementsByTagName('iframe')[1].contentWindow.document;
+                var i_frame = $('.picker-frame').contentWindow.document;
                 var theButton = i_frame.querySelector("#\\:6 > div");
                 var box = theButton.getBoundingClientRect(),
                     coordX = box.left + (box.right - box.left) / 2,
@@ -19,7 +19,7 @@ chrome.extension.sendMessage({}, function (response) {
                 simulateMouseEvent(theButton, "mousedown", coordX, coordY);
                 simulateMouseEvent(theButton, "mouseup", coordX, coordY);
                 simulateMouseEvent(theButton, "click", coordX, coordY);
-                var url_box = $('#\\:l');
+                var url_box = i_frame.getElementsByTagName('input')[0];
                 url_box.sendkeys('https://youtube.com/watch?v=M94bXPxpAes{enter}')
                 console.log("Done!");
             }
