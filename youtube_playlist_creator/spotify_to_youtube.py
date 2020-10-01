@@ -173,5 +173,5 @@ def add_songs_to_yt_playlist(rsrc_name):
 
 # asyncio.run(get_song_urls("Album", "6a4HHZe13SySfC50BGy8Hm"))
 # sync run takes 40s for just 13 songs. properly made async takes less than 1 second :')
-asyncio.run(get_song_urls("Playlist", "5ANamkjBXMJ2PqdpL56Bqp"))
+# asyncio.run(get_song_urls("Playlist", "5ANamkjBXMJ2PqdpL56Bqp"))
 # add_songs_to_yt_playlist("Mastermind (Deluxe) - by Rick Ross")

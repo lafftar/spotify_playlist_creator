@@ -4,7 +4,7 @@ from selenium import webdriver
 def init_chrome():
     options = webdriver.ChromeOptions()
     options.add_argument("--remote-debugging-port=8000")
-    options.add_argument("user-data-dir=BestPlaylists")
+    options.add_argument("user-data-dir=Default")
     options.add_argument("--disable-blink-features")
     options.add_argument("--disable-notifications")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -24,5 +24,6 @@ def init_chrome():
     driver.implicitly_wait(5)
     return driver
 
-init_chrome()
+driver = init_chrome()
+driver.get("https://youtube.com/login")
 input()

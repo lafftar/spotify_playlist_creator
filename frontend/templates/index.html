@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hello World</title>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="{{url_for('static', filename='logic.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+</head>
+
+<body>
+    <div id="main_container">
+        <h1>Convert Spotify Playlist or Album to Youtube Playlist</h1>
+        <!-- Search spotify for a resource to output yt vids -->
+        <p>You can place a url to the album or playlist here, or you can search for it like
+        you would on spotify.</p>
+        <input type="text" placeholder="Search.." name="search">
+    </div>
+</body>
+
+</html>
